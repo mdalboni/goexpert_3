@@ -192,7 +192,7 @@ func TestGetWeatherUnmarshalError(t *testing.T) {
 	_, err := service.GetWeatherByCity("UnmarshalError")
 
 	assert := assert.New(t)
-	assert.Equal("json: cannot unmarshal string into Go struct field .current.feelslike_f of type float64", err.Error())
+	assert.Equal("json: cannot unmarshal string into Go struct field WeatherAPIResponseCurrent.current.feelslike_f of type float64", err.Error())
 }
 
 func TestGetWeatherReaderError(t *testing.T) {
